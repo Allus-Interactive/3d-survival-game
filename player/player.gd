@@ -7,10 +7,14 @@ extends CharacterBody3D
 @export var mouse_sensitivity : float = 0.005
 
 @onready var head: Node3D = $Head
+@onready var interaction_ray_cast: RayCast3D = $Head/InteractionRayCast
 
 func _ready() -> void:
 	# Hide mouse on game screen
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+func _process(delta: float) -> void:
+	interaction_ray_cast.check_interaction()
 
 func _physics_process(delta: float) -> void:
 	move()
