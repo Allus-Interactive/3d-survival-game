@@ -16,6 +16,7 @@ collision_layer = 2
 script = ExtResource("1_3vyb7")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
 mesh = SubResource("CapsuleMesh_3vyb7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
