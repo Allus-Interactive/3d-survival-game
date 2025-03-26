@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=4 uid="uid://b2psgyhetiyyb"]
+[gd_scene load_steps=63 format=4 uid="uid://b2psgyhetiyyb"]
 
 [ext_resource type="PackedScene" uid="uid://hrtpq26vmotg" path="res://player/player.tscn" id="1_71j4m"]
 [ext_resource type="PackedScene" uid="uid://66unx4y0v1v8" path="res://meshes/terrain.tscn" id="1_k0juu"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://gfmceolwulij" path="res://items/interactables/pickup_stone.tscn" id="7_4mrxx"]
 [ext_resource type="PackedScene" uid="uid://byxl13ftyfv23" path="res://items/interactables/pickup_plant.tscn" id="8_4mrxx"]
 [ext_resource type="PackedScene" uid="uid://b4f0100vvr8yf" path="res://UI/HUD/hud.tscn" id="9_7r4gi"]
+[ext_resource type="Script" uid="uid://dnx1yf3kg3ky" path="res://managers/bulletin_controller.gd" id="10_w7kh3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k0juu"]
 transparency = 1
@@ -1211,3 +1212,6 @@ skeleton = NodePath("")
 [node name="HudController" type="Node" parent="UILayer"]
 
 [node name="HUD" parent="UILayer/HudController" instance=ExtResource("9_7r4gi")]
+
+[node name="BulletinController" type="Node" parent="UILayer"]
+script = ExtResource("10_w7kh3")
